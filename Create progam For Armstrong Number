@@ -1,0 +1,52 @@
+>>>>>>>>>>>>.Logic>>>>>>>>>>>>
+abcd... = pow(a,n) + pow(b,n) + pow(c,n) + pow(d,n) + .... 
+for E.x. 
+If the 4 digit num is enetered by user then sum of each didgit 4 times multiple of itself will have To give The same Num Inputed by User 
+
+Input : (1634)   n=digits=4
+Output : Yes
+1*1*1*1 + 6*6*6*6 + 3*3*3*3 + 4*4*4*4 = (1634)
+
+here Input is 1634 which is equal to the value we got After calculating that is 1634 so it is An Armstrong Number
+
+<<<<<<<<<<<<<For @2  Digits Input num>>>>>>>>>>
+def power(x, y): 
+      
+    if y == 0: 
+        return 1
+    if y % 2 == 0: 
+        return power(x, y // 2) * power(x, y // 2) 
+          
+    return x * power(x, y // 2) * power(x, y // 2) 
+  
+# Function to calculate order of the number 
+def order(x): 
+  
+    # Variable to store of the number 
+    n = 0
+    while (x != 0): 
+        n = n + 1
+        x = x // 10
+          
+    return n 
+    
+    
+    Also >>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<
+   
+    def isArmstrong(x): 
+      
+    n = order(x) 
+    temp = x 
+    sum1 = 0
+      
+    while (temp != 0): 
+        r = temp % 10
+        sum1 = sum1 + power(r, n) 
+        temp = temp // 10
+  
+    # If condition satisfies 
+    return (sum1 == x) 
+    
+    
+    
+    
