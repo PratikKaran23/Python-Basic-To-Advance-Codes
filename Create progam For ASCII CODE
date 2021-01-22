@@ -1,0 +1,9 @@
+>>>>>>>>>>>>>>>>>>>logic<<<<<<<<<<<<<<<<<<
+
+we can get ascii code by simply using ord() function 
+
+ord() : It coverts the given string of length one, return an integer representing the unicode code point of the character. For example, ord(‘a’) returns the integer 97.
+
+c = 'g'(e.x)
+# print the ASCII value of assigned character in c 
+print("The ASCII value of '" + c + "' is", ord(c)) 
